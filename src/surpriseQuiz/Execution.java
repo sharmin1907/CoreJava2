@@ -58,23 +58,23 @@ public class Execution {
         arrayList.add("surprise");
         arrayList.add("quiz");
 
-        //for each loop
+        //for each loop-Array
         System.out.println("for each loop");
         for (String s : arrayList) {
             System.out.println(s);
         }
 
-        //for while loop
+        //for while loop-Array
         System.out.println("for while loop");
         int num = 0;
-        while (linkedList.size() > num) {
-            System.out.println(linkedList.get(num));
+        while (arrayList.size() > num) {
+            System.out.println(arrayList.get(num));
             num++;
         }
 
-        //for Iterator
+        //for Iterator-Array
         System.out.println("for iterator loop");
-        Iterator text = linkedList.iterator();
+        Iterator text = arrayList.iterator();
         while (text.hasNext()) {
             System.out.println(text.next());
         }
