@@ -1,0 +1,112 @@
+1.What is compile time and run time?
+
+Runtime and compile time are programming terms that refer to different stages of software program development.
+Compile-time is the instance where the code you entered is converted to executable while Run-time is the instance where
+the executable is running. ... Compile-time checking occurs during the compile time.The terms "runtime" and "compile time"
+ are often used by programmers to refer to different types of errors. A compile time error is a problem such as a syntax
+ error or missing file reference that prevents the program from successfully compiling. The compiler produces compile time
+ errors and usually indicates what line of the source code is causing the problem.
+
+2.What is heap?
+
+A Heap is a special Tree-based data structure in which the tree is a complete binary tree. Generally, Heaps can be of two types:
+Max-Heap: In a Max-Heap the key present at the root node must be greatest among the keys present at all of it’s children.
+          The same property must be recursively true for all sub-trees in that Binary Tree.
+Min-Heap: In a Min-Heap the key present at the root node must be minimum among the keys present at all of it’s children.
+          The same property must be recursively true for all sub-trees in that Binary Tree.
+
+
+3.How java manage it's memory?
+
+Java manage it's memory by following some memory management process.Memory management is the process of allocating new
+ objects and removing unused objects to make space for those new object allocations.
+ The major concepts in Java Memory Management :
+                    -JVM Memory Structure
+                    -Working of Garbage Collector
+
+
+4.What is the difference between String, StringBuffer and StringBuilder?
+
+String is immutable whereas StringBuffer and StringBuilder are mutable classes.
+StringBuffer is thread safe and synchronized whereas StringBuilder is not, that's why StringBuilder is more faster than StringBuffer.
+String concat + operator internally uses StringBuffer or StringBuilder class.
+For String manipulations in non-multi threaded environment, we should use StringBuilder else use StringBuffer class.
+
+5.What is Singleton class?
+
+In object-oriented programming, a singleton class is a class that can have only one object (an instance of the class) at a time.
+After first time, if we try to instantiate the Singleton class, the new variable also points to the first instance created.
+So whatever modifications we do to any variable inside the class through any instance, it affects the variable of the single
+instance created and is visible if we access that variable through any variable of that class type defined.
+To design a singleton class:
+    -Make constructor as private.
+    -Write a static method that has return type object of this singleton class. Here, the concept of Lazy initialization
+     in used to write this static method.
+
+6.What is Serialization and Deserialization?
+
+Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse
+process where the byte stream is used to recreate the actual Java object in memory.
+
+7.Which one will take more memory, an int or Integer?
+
+ int is one of several integer types. Some may be smaller than int , some may be larger, and some may be the same size,
+ depending on the particular implementation you're using.
+
+8.Why is String Immutable in Java?
+
+The string is Immutable in Java because String objects are cached in String pool. ... Another reason of why String class
+is immutable could die due to HashMap. Since Strings are very popular as HashMap key, it's important for them to be
+immutable so that they can retrieve the value object which was stored in HashMap.
+
+
+9.What is constructor chaining in Java?
+
+Constructor chaining is the process of calling one constructor from another constructor with respect to current object.
+Constructor chaining can be done in two ways:
+       -Within same class: It can be done using this() keyword for constructors in same class
+       -From base class: by using super() keyword to call constructor from the base class.
+
+10.The difference between Serial and Parallel Garbage Collector?
+
+Both the serial and parallel collectors cause a stop-the-world during the GC.but the difference between them is
+a serial collector is a default copying collector which uses only one GC thread for the GC operation, while a parallel
+collector uses multiple GC threads for the GC operation.
+
+11.What is JIT stands for?
+
+Just in time.
+
+12.Explain Java Heap space and Garbage collection?
+
+Java objects reside in an area called the heap. The heap is created when the JVM starts up and may increase or decrease
+in size while the application runs. When the heap becomes full, garbage is collected. During the garbage collection
+objects that are no longer used are cleared, thus making space for new objects.
+
+13.Can you guarantee the garbage collection process?
+
+Being an automatic process, programmers need not initiate the garbage collection process explicitly in the code. ... It
+can choose to reject the request and so it is not guaranteed that these calls will do the garbage collection. This
+decision is taken by the JVM based on the eden space availability in heap memory.
+
+14.What is the difference between stack and heap in Java?
+
+Parameter	       Stack Memory	                                               Heap Space
+Application	    Stack is used in parts, one at a time             The entire application uses Heap space during runtime.
+                during execution of a thread.
+Size	        Stack has size limits depending upon OS            There is no size limit on Heap.
+                and is usually smaller then Heap.
+Storage	        Stores only primitive variable and references      All the newly created objects are stored here.
+                to objects that are created in Heap Space.
+Order	        It is accessed using Last-in First-out (LIFO)
+                memory allocation system.	                       This memory is accessed via complex memory management.
+                                                                   techniques that include Young Generation, Old or Tenured
+                                                                   Generation, and Permanent Generation.
+Life	        Stack memory only exists as long as the current    Heap space exists as long as the application runs.
+                method is running.
+Efficiency	    Comparatively much faster to allocate when          Slower to allocate when compared to stack.
+                compared to heap.
+Allocation/
+Deallocation	This Memory is automatically allocated and          Heap space is allocated when new objects are created
+                deallocated when a method is called and returned    and deallocated by Gargabe Collector when they are no
+                respectively.                                        longer referenced.
